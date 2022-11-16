@@ -30,31 +30,34 @@ public class App {
 
             switch (userChoice) {
                 case "1":
-                    System.out.print("Enter Your ID : ");
-                    String ID = scanner.nextLine();
-                    System.out.print("Enter Your name : ");
+                    System.out.println("Enter Your ID : ");
+                    int ID = scanner.nextInt();
+                    System.out.println("Enter Your name : ");
                     String name = scanner.nextLine();
-                    System.out.print("Enter Your Email : ");
+                    System.out.println("Enter Your Email : ");
                     String email = scanner.nextLine();
-                    System.out.print("Enter your Student ID : ");
-                    String Student_ID = scanner.nextLine();
-                    System.out.print("Enter your Student Roll Number : ");
-                    String Student_Rool_Number = scanner.nextLine();
+                    System.out.println("Enter your Student ID : ");
+                    int Student_ID = scanner.nextInt();
+                    System.out.println("Enter your Student Roll Number : ");
+                    int Student_Rool_Number = scanner.nextInt();
 
                     if (email != null) {
                         System.out.println("Create a" + getName() + "was succssfuly ");
+                        User studentInsert = new User(ID,name,email,Student_ID,Student_Rool_Number);
+                        userService.insert(studentInsert);
                     } else {
                         System.out.print("This Email or ID is already used ");
                     }
                     break;
+
                     // User user = new User( ID, name, email, Student_ID, Student_Rool_Number);
                     // userService.insert(user);
                     // break;
 
                 case "2":
-                    System.out.println("==================================");
-                    displayUsers(userService.getAll());
-                    System.out.println("==================================");
+                System.out.println("==================================");
+                displayUsers(userService.getAll());
+                System.out.println("==================================");
 
                 case "3":
                 System.out.println("==================================");

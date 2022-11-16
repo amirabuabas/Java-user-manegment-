@@ -9,13 +9,12 @@ public class User {
     private int Student_ID;
     private int Student_Roll_Number;
 
-    // Parametrized constructor
-    public User(String iD, String Name, String Email, String student_ID2, int student_Rool_Number) {
-        this.ID = ID;
-        this.Name = Name;
-        this.Email = Email;
-        this.Student_ID = Student_ID;
-        this.Student_Roll_Number = student_Rool_Number;
+    public User(int iD, String name, String email, int student_ID, int student_Roll_Number) {
+        ID = iD;
+        Name = name;
+        Email = email;
+        Student_ID = student_ID;
+        Student_Roll_Number = student_Roll_Number;
     }
 
     // Default Constructor

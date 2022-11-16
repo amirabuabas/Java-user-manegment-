@@ -9,8 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import dto.User;
-
-public class StudentMySQLIml<Student> implements StudentDAO {
+public class StudentMySQLIml implements StudentDAO {
     private Connection connection;
     private PreparedStatement preparedStatement;
     private ResultSet resultSet;
@@ -173,7 +172,7 @@ public class StudentMySQLIml<Student> implements StudentDAO {
     @Override
     public List<User> getAll() {
 
-        List<Student> userList = new LinkedList<>();
+        List<User> userList = new LinkedList<>();
 
         try {
             preparedStatement = connection.prepareStatement(GET_ALL);
